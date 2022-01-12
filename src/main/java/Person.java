@@ -9,6 +9,7 @@ public class Person {
     private List<Person> children = new ArrayList<Person>();
     private Person partner;
 
+    //Wat doet deze code?
     public Person() {
         this.name = "John";
         this.lastName = "Doe";
