@@ -68,53 +68,44 @@ class PersonTest {
 //        List<Person> bla;
 //        bla.add(child1);
         assertEquals(3, person.getChildren().size());
-        assertEquals(child1.getName(),person.getChildren().get(0).getName());
+        assertEquals(child1.getName(), person.getChildren().get(0).getName());
         assertEquals(child2.getName(), person.getChildren().get(1).getName());
         assertEquals(child3.getName(), person.getChildren().get(2).getName());
 //        assertEquals(1, person.getChildren().size());
 //        assertEquals(child.getName(), person.getChildren().get(0).getName());
     }
-     @Test
-    void childWithNonUniqueNameCannotBeAddedToList () {
-         Person person = new Person();
-         Person child4 = new Person("Henk");
-         person.addChild(child4);
-         Person child5 = new Person("Henk");
-         person.addChild(child5);
-         assertEquals(1, person.getChildren().size());
 
-     }
+    @Test
+    void childWithNonUniqueNameCannotBeAddedToList() {
+        Person person = new Person();
+        Person child4 = new Person("Henk");
+        person.addChild(child4);
+        Person child5 = new Person("Henk");
+        person.addChild(child5);
+        assertEquals(1, person.getChildren().size());
 
+    }
 
-
-
-
-
-
-
-
-
-
-     @Test
+    @Test
     void CheckOf2ChildrenOneWithCapitalLetterAndOneWithLowercase() {
         Person person = new Person();
         Person child6 = new Person("Lara");
         Person child7 = new Person("LARA");
         person.addChild(child6);
         person.addChild(child7);
-        assertEquals(1,person.getChildren().size());
-     }
+        assertEquals(1, person.getChildren().size());
+    }
 
 
 //als ik iemand toevoeg met een lowercase voornaam en achternaam
     //wordt dat dan netjes omgezet naar een hoofdletter
 
-    @ Test
+    @Test
     void DoeMaarIetsAubZsm() {
 //    Person person = new Person();
-    Person deabak = new Person();
-    deabak.setLastName("de jONG");
-    assertEquals("De jong",deabak.getLastName());
-}
+        Person deabak = new Person();
+        deabak.setLastName("de jONG");
+        assertEquals("De jong", deabak.getLastName());
+    }
 
 }
