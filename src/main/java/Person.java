@@ -9,7 +9,7 @@ public class Person {
     private List<Person> children = new ArrayList<Person>();
     private Person partner;
 
-    //Wat doet deze code?
+    //Wat doet deze code? constructor
     public Person() {
         this.name = "John";
         this.lastName = "Doe";
@@ -70,7 +70,6 @@ public class Person {
         }
         return false;
     }
-
     public void addChild(Person child) {
         if(hasUniqueName(child)) {
             children.add(child);
